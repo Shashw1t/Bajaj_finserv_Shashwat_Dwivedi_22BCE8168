@@ -22,8 +22,8 @@ function isOdd(numStr){
 function alternatingCaps(str){
   let res = '';
   let upper = true;
-  for (let c of str) {
-    if (/[a-zA-Z]/.test(c)) {
+  for(let c of str){
+    if(/[a-zA-Z]/.test(c)){
       res += upper ? c.toUpperCase() : c.toLowerCase();
       upper = !upper;
     }
@@ -39,25 +39,25 @@ function processData(data){
   let sum = 0;
   let alpha_concat = '';
 
-  for (let item of data) {
-    if (isNumber(item)) {
+  for(let item of data){
+    if(isNumber(item)) {
       if (isEven(item)) even_numbers.push(item.toString());
       else odd_numbers.push(item.toString());
       sum += parseInt(item);
-    } else if (isAlpha(item)) {
+    } else if(isAlpha(item)){
       alphabets.push(item.toUpperCase());
       alpha_concat += item;
-    } else {
-      if (item.length === 1 && !isAlpha(item) && !isNumber(item)) {
+    } else{
+      if(item.length===1 && !isAlpha(item) && !isNumber(item)){
         special_characters.push(item);
-      } else {
+      } else{
         let onlyAlpha = item.replace(/[^a-zA-Z]/g, '');
         let onlySpecial = item.replace(/[a-zA-Z0-9]/g, '');
-        if (onlyAlpha) {
+        if(onlyAlpha){
           alphabets.push(onlyAlpha.toUpperCase());
           alpha_concat += onlyAlpha;
         }
-        if (onlySpecial) {
+        if(onlySpecial){
           for (let c of onlySpecial) special_characters.push(c);
         }
       }
@@ -66,7 +66,7 @@ function processData(data){
 
   let concat_string = alternatingCaps(alpha_concat.split('').reverse().join(''));
 
-  return {
+  return{
     is_success: true,
     user_id: `${FULL_NAME}_${DOB}`,
     email: EMAIL,

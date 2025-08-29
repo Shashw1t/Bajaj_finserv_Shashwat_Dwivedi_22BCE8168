@@ -1,6 +1,6 @@
 const { processData } = require('../models/bfhlModel');
 
-exports.bfhlPost = (req,res) =>{
+exports.bfhlPost =(req,res)=>{
   try{
     const data = req.body.data || [];
     const result = processData(data);

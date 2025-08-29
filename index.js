@@ -8,7 +8,7 @@ app.get('/', (req,res)=>{
   res.send('Make a POST request to /bfhl with a JSON body to use this API. By yours truly- Shashwat Dwivedi');
 });
 
-app.get('/bfhl', (req, res) => {
+app.get('/bfhl', (req,res)=>{
   res.send('Make a POST request to /bfhl with a JSON body to use this API. By yours truly- Shashwat Dwivedi');
 });
 
