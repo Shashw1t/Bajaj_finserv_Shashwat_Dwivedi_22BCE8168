@@ -3,23 +3,23 @@ const DOB = '17091999';
 const EMAIL = 'iamsoranic@gmail.com';
 const ROLL_NUMBER = '22BCE8168';
 
-function isNumber(str) {
+function isNumber(str){
   return /^\d+$/.test(str);
 }
 
-function isAlpha(str) {
+function isAlpha(str){
   return /^[a-zA-Z]+$/.test(str);
 }
 
-function isEven(numStr) {
+function isEven(numStr){
   return parseInt(numStr) % 2 === 0;
 }
 
-function isOdd(numStr) {
+function isOdd(numStr){
   return parseInt(numStr) % 2 === 1;
 }
 
-function alternatingCaps(str) {
+function alternatingCaps(str){
   let res = '';
   let upper = true;
   for (let c of str) {
@@ -31,7 +31,7 @@ function alternatingCaps(str) {
   return res;
 }
 
-function processData(data) {
+function processData(data){
   let even_numbers = [];
   let odd_numbers = [];
   let alphabets = [];

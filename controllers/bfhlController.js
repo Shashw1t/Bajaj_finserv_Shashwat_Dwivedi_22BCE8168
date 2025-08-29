@@ -1,11 +1,11 @@
 const { processData } = require('../models/bfhlModel');
 
-exports.bfhlPost = (req, res) => {
-  try {
+exports.bfhlPost = (req,res) =>{
+  try{
     const data = req.body.data || [];
     const result = processData(data);
     res.status(200).json(result);
-  } catch (e) {
+  } catch (err){
     res.status(200).json({
       is_success: false,
       user_id: 'Shashwat_22BCE8168',
